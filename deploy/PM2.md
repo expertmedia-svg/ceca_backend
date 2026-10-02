@@ -9,13 +9,14 @@ cd ~/apps/ceca_backend
 git pull --ff-only
 sudo apt update
 sudo apt install -y python3-venv python3-pip
-python3 -m venv .venv
+/usr/bin/python3 -c "import sys; assert sys.version_info >= (3, 11), 'Python 3.11 ou supérieur requis'"
+/usr/bin/python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.lock.txt
 cp deploy/pm2.env.example .env
 chmod 600 .env
 ```
 
-La copie de `.env` est réservée à la première installation. Lors d'une mise à jour, conserver votre `.env` existant. Python 3.11 ou ultérieur requis.
+La copie de `.env` est réservée à la première installation. Lors d'une mise à jour, conserver votre `.env` existant. Python 3.11 ou ultérieur requis. Le chemin /usr/bin/python3 évite les shims pyenv qui peuvent sélectionner une ancienne version. Si le contrôle de version échoue, sélectionner explicitement un Python 3.11 ou supérieur avant de créer le venv. Ne pas continuer après une installation pip en erreur.
 
 Cette configuration utilise SQLite : le fichier `ceca.db` est créé dans le dossier du backend et reste présent après les redémarrages. Un processus PM2 gère l'API. Si vous disposez déjà d'un PostgreSQL, renseigner son `DATABASE_URL` dans `.env` avant les migrations ; aucun service PostgreSQL n'est créé ni modifié automatiquement.
 
