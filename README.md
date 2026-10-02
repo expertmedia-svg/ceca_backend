@@ -1,3 +1,7 @@
+# Déploiement recommandé : PM2
+
+Le déploiement utilisé est **PM2**, sur le port local **8657**, avec Nginx pour **cecadrbackend.yingr-ai.com**. Suivre [le guide PM2](deploy/PM2.md). Configuration : [ecosystem.config.js](ecosystem.config.js) et [deploy/pm2.env.example](deploy/pm2.env.example). Le guide Docker ci-dessous reste une alternative facultative.
+
 # CECA-DR — backend
 
 API FastAPI indépendante du frontend. Dépôt destiné à la VM OVH : **https://cecadrbackend.yingr-ai.com**. Frontend React hébergé sur cPanel : **https://ceca-dr.com**.
