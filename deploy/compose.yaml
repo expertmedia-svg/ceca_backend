@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ceca
+      POSTGRES_USER: ceca
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Définir POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ceca -d ceca"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [ceca]
+  api:
+    build:
+      context: ..
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ENVIRONMENT: production
+      DATABASE_URL: "postgresql+psycopg://ceca:${POSTGRES_PASSWORD:?Définir POSTGRES_PASSWORD}@db:5432/ceca"
+      CORS_ORIGINS: ${CORS_ORIGINS:-https://ceca-dr.com,https://www.ceca-dr.com}
+      COOKIE_SECURE: "true"
+      COOKIE_SAMESITE: "none"
+      SEED_WORK_DATA: "false"
+      SESSION_HOURS: "8"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks: [ceca]
+volumes:
+  postgres_data:
+networks:
+  ceca:
+    ipam:
+      config:
+        - subnet: 172.30.55.0/24
+          gateway: 172.30.55.1

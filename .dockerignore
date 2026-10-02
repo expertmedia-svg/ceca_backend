@@ -1,0 +1,12 @@
+.env
+.git
+.env.*
+.venv
+.pip-cache
+__pycache__
+.pytest_cache
+*.db
+*.db-*
+ACCES_LOCAL.txt
+tests
+work-data.json
