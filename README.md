@@ -129,3 +129,13 @@ sudo docker compose exec -T db pg_dump -U ceca -d ceca > sauvegarde-ceca.sql
 ```
 
 Les volumes persistent entre redémarrages. Ne pas utiliser `docker compose down -v` pour une simple mise à jour.
+
+## Administration des pages publiques
+
+Le frontend dispose du dashboard `/impact/site` (« Contenus du site »), réservé à SUPER_ADMIN, DIRECTION et COMMUNICATION. Les huit pages publiques sont éditables : titres, présentations, images, boutons et rubriques ordonnées ; les rubriques Actualités sont des articles. Les projets, vidéos et documents restent gérés par leurs modules.
+
+Routes : `GET /impact/site-pages`, `PUT /impact/site-pages/:slug`, `DELETE /impact/site-pages/:slug` ; seules les versions publiées sont exposées dans `GET /public/catalog`. Les pages sont stockées dans la table de contenus existante : aucune migration supplémentaire nécessaire. Enregistrer sans publication retire la version personnalisée du site ; les éléments de présentation par défaut restent affichés.
+
+`POST /impact/media` accepte le corps binaire d'une image JPG/PNG/WebP (10 Mo, 16 millions de pixels maximum), vérifie l'image, retire ses métadonnées et la convertit en WebP. Les fichiers sont conservés dans `uploads/` et servis publiquement sous `/media/`. Réserver ces images à une diffusion publique ; sauvegarder `uploads/` avec la base. Ce dossier est exclu de Git.
+
+Après `git pull --ff-only`, relancer uniquement `ceca-backend`. Copier aussi la nouvelle configuration `deploy/nginx.conf` vers le site Nginx puis valider et recharger Nginx, afin d'autoriser les chargements d'images jusqu'à 10 Mo. Publier le nouveau build React sur cPanel.

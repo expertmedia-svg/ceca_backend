@@ -47,13 +47,14 @@ def zones(db: Session=Depends(get_db)):
 
 @router.get('/public/catalog')
 def catalog(db: Session=Depends(get_db)):
+    from .site import public_pages
     contents=db.scalars(select(Content).where(Content.published.is_(True),Content.kind!='zone')).all()
     public_projects=projects(db);ids=[p['id'] for p in public_projects]
     records=db.scalars(select(Record).where(Record.project_id.in_(ids),Record.status!='Archivé')).all()
     producers=[r for r in records if r.collection=='producteurs'];locations=zones(db)
     women=round(100*sum(r.payload.get('sex')=='Femme' for r in producers)/len(producers),1) if producers else 0
     kpis=[{'value':str(len(producers)),'label':'Producteurs accompagnés'},{'value':str(women)+' %','label':'Femmes'},{'value':str(sum(r.collection=='menages' for r in records)),'label':'Ménages suivis'},{'value':str(round(sum(float(r.payload.get('surface',0)) for r in producers),2))+' ha','label':'Superficie accompagnée'},{'value':str(sum(r.collection=='transformateurs' for r in records)),'label':'Transformateurs'},{'value':str(len(set(z['name'] for z in locations))),'label':'Communes'}]
-    return {'projects':public_projects,'zones':locations,'videos':[public_content(c) for c in contents if c.kind=='video'],'documents':[public_content(c) for c in contents if c.kind=='document'],'partners':[c.title for c in contents if c.kind=='partner'],'kpis':kpis,'source':'Données de travail non validées' if settings.seed_work_data else 'Contenus publiés par le CECA-DR'}
+    return {'projects':public_projects,'zones':locations,'videos':[public_content(c) for c in contents if c.kind=='video'],'documents':[public_content(c) for c in contents if c.kind=='document'],'partners':[c.title for c in contents if c.kind=='partner'],'kpis':kpis,'pages':public_pages(db),'source':'Données de travail non validées' if settings.seed_work_data else 'Contenus publiés par le CECA-DR'}
 
 @router.post('/contact',status_code=201)
 def contact(payload: ContactIn,request: Request,db: Session=Depends(get_db)):

@@ -17,3 +17,4 @@ work-data.json
 *.key
 *.p12
 *.sql
+uploads/

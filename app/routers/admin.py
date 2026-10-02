@@ -62,7 +62,7 @@ def update_project(project_id: str,payload: ProjectIn,user: User=Depends(current
 @router.get('/content')
 def content(user: User=Depends(current_user),db: Session=Depends(get_db)):
     editor(user)
-    return [{'id':r.id,'kind':r.kind,'title':r.title,'published':r.published,'payload':r.payload} for r in db.scalars(select(Content))]
+    return [{'id':r.id,'kind':r.kind,'title':r.title,'published':r.published,'payload':r.payload} for r in db.scalars(select(Content).where(Content.kind!='sitepage'))]
 
 @router.post('/content',status_code=201)
 def save_content(payload: ContentIn,user: User=Depends(current_user),db: Session=Depends(get_db)):
