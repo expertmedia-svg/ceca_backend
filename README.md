@@ -139,3 +139,31 @@ Routes : `GET /impact/site-pages`, `PUT /impact/site-pages/:slug`, `DELETE /impa
 `POST /impact/media` accepte le corps binaire d'une image JPG/PNG/WebP (10 Mo, 16 millions de pixels maximum), vérifie l'image, retire ses métadonnées et la convertit en WebP. Les fichiers sont conservés dans `uploads/` et servis publiquement sous `/media/`. Réserver ces images à une diffusion publique ; sauvegarder `uploads/` avec la base. Ce dossier est exclu de Git.
 
 Après `git pull --ff-only`, relancer uniquement `ceca-backend`. Copier aussi la nouvelle configuration `deploy/nginx.conf` vers le site Nginx puis valider et recharger Nginx, afin d'autoriser les chargements d'images jusqu'à 10 Mo. Publier le nouveau build React sur cPanel.
+
+## Charger les contenus publics recherchés
+
+Un jeu de contenus sourcés est fourni dans `app/public-content.json` : huit pages, trois projets documentés, quatre documents originaux, un lien de film publié par Sahelp, trois partenaires, deux localisations communales et des indicateurs historiques.
+
+Sur la VM, après mise à jour du dépôt :
+
+```bash
+cd ~/apps/ceca_backend
+git pull --ff-only
+.venv/bin/python -m app.import_public
+pm2 restart ceca-backend --update-env
+pm2 save
+```
+
+L'import est idempotent et conserve les contenus déjà présents, y compris les textes personnalisés dans le dashboard. Il n'ajoute aucun compte, ménage, producteur ou production fictive. Les résultats historiques ne remplacent les indicateurs publics que lorsque la base ne contient aucun dossier terrain. Le dashboard de suivi reste calculé sur les vrais dossiers saisis.
+
+Les projets portent le statut « Documenté », sans présumer de leur état actuel. Les effectifs non disponibles ne sont pas inventés. Les illustrations sont des dessins du site, pas des photographies de ces projets. Le film est un lien publié par Sahelp ; sa lecture sur YouTube n'a pas pu être vérifiée.
+
+Sources consultées le 2 octobre 2026 :
+
+- Sahelp, présentation du partenariat CECA-DR : https://sahelp.nl/projecten-kopie/project-x-kopie-1
+- CECA-DR, rapport intermédiaire Projet Intégré III, janvier–juin 2023 : https://www.sahelp.nl/resource/file/normal/ea02e9a918571610c97d2827c8da7b1f6b21ad43_2023-08-20-Rapport-N1-AN-III-PI3.pdf
+- Zebunet, rapports d'activité 2022 et 2023 : https://zebu.net/wp-content/uploads/2023/10/Rapport-dactivite-Zebunet-2022.pdf et https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf
+- Sahelp, bilan décembre 2025 : https://www.sahelp.nl/resource/file/normal/c878dc0f317d30d1c31abadf202e826cd15c210d_2025-12-15-Nieuwsbrief-Sahelp-hoogtepunten-2025.pdf
+- Sahelp, annonce agroforesterie du 16 juin 2024 : https://www.sahelp.nl/
+
+Les sources divergent sur l'année de création de l'organisation : aucune date de fondation n'a été retenue. Les montants et effectifs ne sont pas extrapolés à 2026. Transférer aussi le nouveau build React sur cPanel pour les fiches documentées, les illustrations et le statut supplémentaire.

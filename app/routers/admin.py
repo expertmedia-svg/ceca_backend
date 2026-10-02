@@ -2,7 +2,7 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, field_validator
 from ..db import get_db
 from ..models import Project, Content, User, Contact, Newsletter, AuditLog
 from ..schemas import ContentIn
@@ -18,12 +18,20 @@ class ProjectIn(BaseModel):
     slug: str = Field(min_length=1,max_length=120,pattern=r'^[a-z0-9-]+$')
     published: bool=False
     location: str=Field(default='',max_length=200)
-    status: str=Field(default='En cours',pattern=r'^(En cours|Terminé)$')
+    status: str=Field(default='En cours',pattern=r'^(En cours|Terminé|Documenté)$')
+    description: str=Field(default='',max_length=12000)
+    sourceUrl: str=Field(default='',max_length=2000)
     period: str=Field(default='',max_length=100)
     domains: list[str]=Field(default_factory=list,max_length=20)
     beneficiaries: int=Field(default=0,ge=0)
     partners: str=Field(default='',max_length=500)
     photo: str=Field(default='',max_length=2000)
+
+    @field_validator('sourceUrl')
+    @classmethod
+    def source_https(cls,value):
+        if value and not value.startswith('https://'):raise ValueError('Source HTTPS requise.')
+        return value
 
 def editor(user: User):
     if user.role not in {'SUPER_ADMIN','DIRECTION','COMMUNICATION'}:
@@ -62,7 +70,7 @@ def update_project(project_id: str,payload: ProjectIn,user: User=Depends(current
 @router.get('/content')
 def content(user: User=Depends(current_user),db: Session=Depends(get_db)):
     editor(user)
-    return [{'id':r.id,'kind':r.kind,'title':r.title,'published':r.published,'payload':r.payload} for r in db.scalars(select(Content).where(Content.kind!='sitepage'))]
+    return [{'id':r.id,'kind':r.kind,'title':r.title,'published':r.published,'payload':r.payload} for r in db.scalars(select(Content).where(Content.kind.in_(['video','document','zone','partner','testimonial'])))]
 
 @router.post('/content',status_code=201)
 def save_content(payload: ContentIn,user: User=Depends(current_user),db: Session=Depends(get_db)):

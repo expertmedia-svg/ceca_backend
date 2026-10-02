@@ -1,0 +1,446 @@
+{
+  "pages": {
+    "accueil": {
+      "title": "Accompagner les communautés rurales.",
+      "subtitle": "Agriculture, eau et autonomie économique au Burkina Faso.",
+      "text": "Le CECA-DR intervient notamment dans les communes de Boussé et de Toéghin. Ses activités sont présentées dans le rapport intermédiaire du Projet Intégré III, consacré au premier semestre 2023.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Des actions documentées",
+          "text": "Explorez les projets et leurs sources publiques.",
+          "photo": "",
+          "link": "/projets",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Des publications accessibles",
+          "text": "Rapports et documents partenaires sont consultables dans les ressources.",
+          "photo": "",
+          "link": "/ressources",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    },
+    "qui-sommes-nous": {
+      "title": "Le CECA-DR, partenaire du développement rural.",
+      "subtitle": "Centre d’Encadrement, de Coopération et d’Appui pour le Développement Rural.",
+      "text": "Les partenaires publient des informations sur les interventions du CECA-DR autour de Boussé. Cette présentation renvoie à leurs documents publics.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Une démarche intégrée",
+          "text": "Les actions associent eau, agriculture, agroforesterie, alphabétisation et activités économiques.",
+          "photo": "",
+          "link": "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Les partenaires",
+          "text": "AJF, Sahelp, CECA-DR et les populations sont mentionnés dans le rapport 2023 du Projet Intégré III.",
+          "photo": "",
+          "link": "https://www.sahelp.nl/resource/file/normal/ea02e9a918571610c97d2827c8da7b1f6b21ad43_2023-08-20-Rapport-N1-AN-III-PI3.pdf",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    },
+    "actions": {
+      "title": "Des interventions complémentaires.",
+      "subtitle": "Produire, préserver les ressources et développer les capacités locales.",
+      "text": "",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Agriculture",
+          "text": "Accompagnement des pratiques culturales et de la lutte contre l’érosion.",
+          "photo": "/field-illustration.svg",
+          "link": "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Agroforesterie",
+          "text": "Association des arbres et des cultures, haies et valorisation du fourrage.",
+          "photo": "/field-illustration.svg",
+          "link": "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Eau et maraîchage",
+          "text": "Retenues d’eau et jardins maraîchers dans les villages accompagnés.",
+          "photo": "/field-illustration.svg",
+          "link": "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Élevage",
+          "text": "Conduite sanitaire et alimentation des petits ruminants.",
+          "photo": "/field-illustration.svg",
+          "link": "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Alphabétisation et tissage",
+          "text": "Apprentissage et activités de tissage pour les communautés.",
+          "photo": "/field-illustration.svg",
+          "link": "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Autonomie économique",
+          "text": "Un projet de microcrédit pour l’élevage est documenté en 2022.",
+          "photo": "/field-illustration.svg",
+          "link": "https://zebu.net/wp-content/uploads/2023/10/Rapport-dactivite-Zebunet-2022.pdf",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    },
+    "projets": {
+      "title": "Les projets documentés du CECA-DR.",
+      "subtitle": "Des fiches accompagnées de publications vérifiables.",
+      "text": "Les dates correspondent aux documents disponibles. Le statut « Documenté » ne présume pas que le projet est encore en cours.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [],
+      "published": true
+    },
+    "notre-impact": {
+      "title": "Des résultats situés dans leur contexte.",
+      "subtitle": "Des références historiques, distinctes du suivi actuel.",
+      "text": "La lettre Sahelp de décembre 2025 rapporte une évaluation auprès de 40 exploitations : 39 répondent au critère étudié, soit 97,5 %. Ce résultat porte sur cet échantillon et cette période.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Périmètre du programme",
+          "text": "La même publication décrit un programme étendu à huit villages.",
+          "photo": "",
+          "link": "https://www.sahelp.nl/resource/file/normal/c878dc0f317d30d1c31abadf202e826cd15c210d_2025-12-15-Nieuwsbrief-Sahelp-hoogtepunten-2025.pdf",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Élevage et femmes",
+          "text": "Le rapport Zebunet 2023 indique 30 femmes bénéficiaires du projet Boussé 2022.",
+          "photo": "",
+          "link": "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    },
+    "capitalisation": {
+      "title": "Apprendre des expériences du terrain.",
+      "subtitle": "Films, rapports et témoignages publiés par les partenaires.",
+      "text": "Sahelp propose un film sur les réalisations du programme et des documents de suivi photographique.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Film du programme",
+          "text": "Lien publié sur la page partenaire Sahelp.",
+          "photo": "",
+          "link": "https://www.youtube.com/watch?v=KxixbwfMOSs",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Rapports et évaluations",
+          "text": "Retrouvez les documents originaux dans les ressources.",
+          "photo": "",
+          "link": "/ressources",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    },
+    "ressources": {
+      "title": "Les documents de référence.",
+      "subtitle": "Rapports publics du CECA-DR et de ses partenaires.",
+      "text": "Les fichiers ci-dessous sont les publications originales hébergées par leurs éditeurs. Leurs années sont indiquées ; ils ne sont pas des rapports de suivi 2026.",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [],
+      "published": true
+    },
+    "actualites": {
+      "title": "Actualités et archives documentaires.",
+      "subtitle": "Des nouvelles datées et reliées aux sources.",
+      "text": "",
+      "photo": "",
+      "eyebrow": "CECA-DR · BURKINA FASO",
+      "buttonLabel": "",
+      "buttonLink": "",
+      "experience": "",
+      "blocks": [
+        {
+          "title": "Décembre 2025 · Bilan du programme",
+          "text": "Sahelp publie des éléments d’évaluation et évoque la préparation d’un nouveau périmètre.",
+          "photo": "",
+          "link": "https://www.sahelp.nl/resource/file/normal/c878dc0f317d30d1c31abadf202e826cd15c210d_2025-12-15-Nieuwsbrief-Sahelp-hoogtepunten-2025.pdf",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "16 juin 2024 · Agroforesterie",
+          "text": "Sahelp annonce des nouvelles du projet lancé en 2023 et un bilan de l’approche intégrée.",
+          "photo": "",
+          "link": "https://www.sahelp.nl/",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "2023 · Suivi de Boussé 2022",
+          "text": "Zebunet rapporte une première échéance honorée et des premières ventes.",
+          "photo": "",
+          "link": "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf",
+          "linkLabel": "Consulter la source"
+        },
+        {
+          "title": "Mai 2022 · Nouveau projet d’élevage",
+          "text": "Zebunet annonce un projet à Boussé et Toéghin pour 30 femmes.",
+          "photo": "",
+          "link": "https://zebu.net/wp-content/uploads/2023/10/Rapport-dactivite-Zebunet-2022.pdf",
+          "linkLabel": "Consulter la source"
+        }
+      ],
+      "published": true
+    }
+  },
+  "projects": [
+    {
+      "id": "public-pi3",
+      "slug": "projet-integre-iii-documente",
+      "name": "Projet Intégré III — référence 2020 089",
+      "location": "Boussé et Toéghin",
+      "status": "Documenté",
+      "period": "Rapport janvier–juin 2023",
+      "domains": [
+        "Agriculture",
+        "Eau",
+        "Agroforesterie"
+      ],
+      "beneficiaries": 0,
+      "partners": "AJF · Sahelp · CECA-DR · Populations",
+      "photo": "/field-illustration.svg",
+      "description": "Programme présenté dans le rapport intermédiaire du premier semestre 2023.",
+      "sourceUrl": "https://www.sahelp.nl/resource/file/normal/ea02e9a918571610c97d2827c8da7b1f6b21ad43_2023-08-20-Rapport-N1-AN-III-PI3.pdf"
+    },
+    {
+      "id": "public-bousse2022",
+      "slug": "bousse-elevage-2022",
+      "name": "Boussé 2022 — élevage de petits ruminants",
+      "location": "Boussé et Toéghin",
+      "status": "Documenté",
+      "period": "Rapports 2022 et 2023",
+      "domains": [
+        "Élevage",
+        "Autonomie économique"
+      ],
+      "beneficiaries": 30,
+      "partners": "Zebunet · CECA-DR",
+      "photo": "/field-illustration.svg",
+      "description": "Microcrédits pour l’élevage. Les effectifs sont ceux du rapport partenaire, pas un total actuel.",
+      "sourceUrl": "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf"
+    },
+    {
+      "id": "public-agroforestry",
+      "slug": "agroforesterie-documentee",
+      "name": "Agroforesterie — programme documenté",
+      "location": "Environs de Boussé",
+      "status": "Documenté",
+      "period": "Annonce partenaire du 16 juin 2024",
+      "domains": [
+        "Agroforesterie",
+        "Agriculture"
+      ],
+      "beneficiaries": 0,
+      "partners": "Sahelp · AJF · CECA-DR",
+      "photo": "/field-illustration.svg",
+      "description": "Projet annoncé comme ayant démarré en 2023 dans les nouvelles Sahelp de juin 2024.",
+      "sourceUrl": "https://www.sahelp.nl/"
+    }
+  ],
+  "contents": [
+    {
+      "id": "public-doc-pi3",
+      "kind": "document",
+      "title": "Projet Intégré III — rapport intermédiaire janvier–juin 2023",
+      "published": true,
+      "payload": {
+        "url": "https://www.sahelp.nl/resource/file/normal/ea02e9a918571610c97d2827c8da7b1f6b21ad43_2023-08-20-Rapport-N1-AN-III-PI3.pdf",
+        "photo": "/field-illustration.svg",
+        "category": "Rapports de projets",
+        "year": "2023",
+        "size": "Document original"
+      }
+    },
+    {
+      "id": "public-doc-zebu2023",
+      "kind": "document",
+      "title": "Zebunet — rapport annuel 2023",
+      "published": true,
+      "payload": {
+        "url": "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf",
+        "photo": "/field-illustration.svg",
+        "category": "Rapports de projets",
+        "year": "2023",
+        "size": "Document original"
+      }
+    },
+    {
+      "id": "public-doc-zebu2022",
+      "kind": "document",
+      "title": "Zebunet — rapport d’activité 2022",
+      "published": true,
+      "payload": {
+        "url": "https://zebu.net/wp-content/uploads/2023/10/Rapport-dactivite-Zebunet-2022.pdf",
+        "photo": "/field-illustration.svg",
+        "category": "Rapports de projets",
+        "year": "2022",
+        "size": "Document original"
+      }
+    },
+    {
+      "id": "public-doc-sahelp2025",
+      "kind": "document",
+      "title": "Sahelp — bilan de décembre 2025",
+      "published": true,
+      "payload": {
+        "url": "https://www.sahelp.nl/resource/file/normal/c878dc0f317d30d1c31abadf202e826cd15c210d_2025-12-15-Nieuwsbrief-Sahelp-hoogtepunten-2025.pdf",
+        "photo": "/field-illustration.svg",
+        "category": "Rapports de projets",
+        "year": "2025",
+        "size": "Document original"
+      }
+    },
+    {
+      "id": "public-film-sahelp",
+      "kind": "video",
+      "title": "Réalisations du programme CECA-DR — lien Sahelp",
+      "published": true,
+      "payload": {
+        "url": "https://www.youtube.com/watch?v=KxixbwfMOSs",
+        "photo": "/field-illustration.svg",
+        "category": "Films de capitalisation",
+        "commune": "Boussé",
+        "duration": "",
+        "project": "public-pi3",
+        "year": ""
+      }
+    },
+    {
+      "id": "public-partner-sahelp",
+      "kind": "partner",
+      "title": "Sahelp",
+      "published": true,
+      "payload": {}
+    },
+    {
+      "id": "public-partner-ajf",
+      "kind": "partner",
+      "title": "AJF",
+      "published": true,
+      "payload": {}
+    },
+    {
+      "id": "public-partner-zebunet",
+      "kind": "partner",
+      "title": "Zebunet",
+      "published": true,
+      "payload": {}
+    },
+    {
+      "id": "public-zone-public-pi3-bousse",
+      "kind": "zone",
+      "title": "Boussé",
+      "published": true,
+      "payload": {
+        "project": "public-pi3",
+        "year": "2023",
+        "type": "Agriculture",
+        "beneficiaries": 0,
+        "results": "Localisation communale documentée dans le rapport 2023."
+      }
+    },
+    {
+      "id": "public-zone-public-pi3-toeghin",
+      "kind": "zone",
+      "title": "Toéghin",
+      "published": true,
+      "payload": {
+        "project": "public-pi3",
+        "year": "2023",
+        "type": "Agriculture",
+        "beneficiaries": 0,
+        "results": "Localisation communale documentée dans le rapport 2023."
+      }
+    },
+    {
+      "id": "public-reference-metrics",
+      "kind": "reference_metrics",
+      "title": "Indicateurs historiques publiés",
+      "published": true,
+      "payload": {
+        "kpis": [
+          {
+            "value": "30",
+            "label": "Femmes · Boussé 2022"
+          },
+          {
+            "value": "8",
+            "label": "Villages · bilan 2025"
+          },
+          {
+            "value": "40",
+            "label": "Exploitations évaluées · 2025"
+          },
+          {
+            "value": "39",
+            "label": "Exploitations satisfaisant le critère · 2025"
+          },
+          {
+            "value": "97,5 %",
+            "label": "Résultat de l’échantillon · 2025"
+          },
+          {
+            "value": "2",
+            "label": "Communes citées · rapport 2023"
+          }
+        ],
+        "source": "Références historiques 2022–2025 · Sahelp / Zebunet. Totaux actuels non établis."
+      }
+    }
+  ],
+  "sources": [
+    "https://sahelp.nl/projecten-kopie/project-x-kopie-1",
+    "https://www.sahelp.nl/resource/file/normal/ea02e9a918571610c97d2827c8da7b1f6b21ad43_2023-08-20-Rapport-N1-AN-III-PI3.pdf",
+    "https://zebu.net/wp-content/uploads/2024/09/Rapport-annuel-2023-Zebunet.pdf",
+    "https://zebu.net/wp-content/uploads/2023/10/Rapport-dactivite-Zebunet-2022.pdf",
+    "https://www.sahelp.nl/resource/file/normal/c878dc0f317d30d1c31abadf202e826cd15c210d_2025-12-15-Nieuwsbrief-Sahelp-hoogtepunten-2025.pdf",
+    "https://www.sahelp.nl/"
+  ],
+  "checkedAt": "2026-10-02"
+}

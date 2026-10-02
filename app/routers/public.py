@@ -11,7 +11,7 @@ from ..security import check_origin
 
 router=APIRouter(tags=['Site public'])
 CENTROIDS={'Boussé':(12.661,-1.893),'Toéghin':(12.78,-1.79),'Koudougou':(12.252,-2.362)}
-PROJECT_FIELDS={'location','status','period','domains','beneficiaries','partners','photo'}
+PROJECT_FIELDS={'location','status','period','domains','beneficiaries','partners','photo','description','sourceUrl'}
 CONTENT_FIELDS={'category','year','size','photo','url','commune','duration','theme','project','beneficiaryConsent'}
 
 def public_project(project: Project):
@@ -54,7 +54,11 @@ def catalog(db: Session=Depends(get_db)):
     producers=[r for r in records if r.collection=='producteurs'];locations=zones(db)
     women=round(100*sum(r.payload.get('sex')=='Femme' for r in producers)/len(producers),1) if producers else 0
     kpis=[{'value':str(len(producers)),'label':'Producteurs accompagnés'},{'value':str(women)+' %','label':'Femmes'},{'value':str(sum(r.collection=='menages' for r in records)),'label':'Ménages suivis'},{'value':str(round(sum(float(r.payload.get('surface',0)) for r in producers),2))+' ha','label':'Superficie accompagnée'},{'value':str(sum(r.collection=='transformateurs' for r in records)),'label':'Transformateurs'},{'value':str(len(set(z['name'] for z in locations))),'label':'Communes'}]
-    return {'projects':public_projects,'zones':locations,'videos':[public_content(c) for c in contents if c.kind=='video'],'documents':[public_content(c) for c in contents if c.kind=='document'],'partners':[c.title for c in contents if c.kind=='partner'],'kpis':kpis,'pages':public_pages(db),'source':'Données de travail non validées' if settings.seed_work_data else 'Contenus publiés par le CECA-DR'}
+    reference=next((c for c in contents if c.kind=='reference_metrics'),None)
+    source='Données de travail non validées' if settings.seed_work_data else 'Contenus publiés par le CECA-DR'
+    if not records and reference:
+        kpis=reference.payload['kpis'];source=reference.payload['source']
+    return {'projects':public_projects,'zones':locations,'videos':[public_content(c) for c in contents if c.kind=='video'],'documents':[public_content(c) for c in contents if c.kind=='document'],'partners':[c.title for c in contents if c.kind=='partner'],'kpis':kpis,'pages':public_pages(db),'source':source}
 
 @router.post('/contact',status_code=201)
 def contact(payload: ContactIn,request: Request,db: Session=Depends(get_db)):
