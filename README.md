@@ -20,13 +20,13 @@ sudo chmod 600 .env
 ```sh
 sudo docker compose up -d --build
 sudo docker compose ps
-curl -f http://127.0.0.1:8000/health
+curl -f http://127.0.0.1:8657/health
 sudo docker compose exec api python -m app.bootstrap --email votre-adresse@example.org
 ```
 
 Le mot de passe du premier SUPER_ADMIN est demandé sans affichage dans le terminal. Les migrations sont appliquées automatiquement avant le démarrage. La base de production est vide : créer les projets, comptes et dossiers depuis la plateforme. Aucun compte local ni donnée de travail n'est importé.
 
-Le réseau Docker utilise `172.30.55.0/24`, gateway `172.30.55.1`. Si ce subnet est déjà utilisé, adapter `compose.yaml` et l'adresse de proxy de confiance dans le Dockerfile. PostgreSQL n'a aucun port public. L'API n'écoute sur l'hôte qu'en `127.0.0.1:8000`.
+Le réseau Docker utilise `172.30.55.0/24`, gateway `172.30.55.1`. Si ce subnet est déjà utilisé, adapter `compose.yaml` et l'adresse de proxy de confiance dans le Dockerfile. PostgreSQL n'a aucun port public. L'API n'écoute sur l'hôte qu'en `127.0.0.1:8657`.
 
 ### Nginx et HTTPS : premier démarrage
 

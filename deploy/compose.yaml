@@ -19,7 +19,7 @@ services:
       context: ..
     restart: unless-stopped
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8657:8000"
     environment:
       ENVIRONMENT: production
       DATABASE_URL: "postgresql+psycopg://ceca:${POSTGRES_PASSWORD:?Définir POSTGRES_PASSWORD}@db:5432/ceca"
